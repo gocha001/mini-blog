@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  width: 800px;
+}

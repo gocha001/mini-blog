@@ -1,0 +1,18 @@
+.switcher {
+  display: flex;
+  gap: 4px;
+}
+
+.btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+}
+
+.active {
+  /* text-decoration: underline; */
+  background-color: green;
+  border-radius: 4px;
+}

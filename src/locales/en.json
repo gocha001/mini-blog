@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "meta": {
+    "home": "Posts",
+    "about": "About Us",
+    "post": "Post"
+  },
+  "home": "Posts",
+  "loading": "Loading...",
+  "notFound": {
+    "title": "Page not found",
+    "back": "Go back home"
+  },
+  "footer": "Igor Kondratuk"
+}
