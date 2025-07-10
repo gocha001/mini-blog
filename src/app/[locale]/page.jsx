@@ -13,7 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
 export default async function Home({ params: { locale } }) {
   const posts = await getPosts();
   const dist = await getDictionary(locale);
-  await new Promise((resolve) => setTimeout(resolve, 7000));
+
   return (
     <>
       <h1>{dist.home}</h1>
