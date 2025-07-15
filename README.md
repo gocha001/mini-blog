@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mini Blog
 
-## Getting Started
+Це невеликий багатомовний блог для перегляду постів. Демо-версія https://mini-blog-ten-eta.vercel.app/uk
 
-First, run the development server:
+## Розділи
 
-```bash
+1.  Головна сторінка містить список постів які є кнопками з посиланнями які ведуть до сторінок цих постів.
+2.  Сторінка постів містить повну інформацію про даний пост і є динамічною сторінкою.
+3.  Сторінка "Про нас" містить інформацію про нас і наші цілі.
+4.  Сторінка Not Found для неіснуючих маршрутів і містить кнопку повернення на головну сторінку.
+
+## Верстка
+
+Верстка десктопна з адаптацією до мобільної версії ( точка перелому 375px ).
+
+## Технології
+
+### Фронтенд
+
+1. Next.js
+2. App Router
+3. React
+4. CSS Modules
+5. React-spinners
+
+Через обмеження App Router в Next.js 15 , використано пряме отримання params.locale та params.id у функціональних компонентах замість await headers() . Такий підхід забезпечує стабільну роботу маршрутизації та перекладів.
+
+### Бекенд
+
+Для отримання даних використано https://jsonplaceholder.typicode.com/
+
+## Встановлення та запуск
+
+### Клонуємо репозитарій
+
+Посилання на репозитарій https://github.com/gocha001/mini-blog
+
+git clone git@github.com:gocha001/mini-blog.git
+
+### Встановлюємо залежності
+
+npm install
+
+### Запускаємо локальний сервер
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Відкриваємо додаток в браузері
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Можна також деплоїти на інші призначені для цього сервіси і отримувати звідти робоче посилання.
 
-## Learn More
+## Ендпоїнти
 
-To learn more about Next.js, take a look at the following resources:
+1. getPosts - отримання списку всіх постів.
+2. getPost - отримання повної інформації про пост.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Автор
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ігор Кондратюк
 
-## Deploy on Vercel
+Емаіл: kalianichgocha@ukr.net
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+linkedIn: https://www.linkedin.com/in/igor-kondratuk-320a16337/
