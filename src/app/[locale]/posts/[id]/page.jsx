@@ -1,10 +1,14 @@
+import css from "./page.module.css";
 import { getPost, getPosts } from "@/lib/api";
 import { locales } from "@/lib/constants";
 import { getDictionary } from "@/lib/dictionary";
 import NotFound from "../../not-found/not-found";
+import { capitalizeFirst } from "@/lib/capitalizeFirst";
 
-export async function generateMetadata({ params: { locale } }) {
+export async function generateMetadata({ params }) {
+  const locale = params.locale;
   const dist = await getDictionary(locale);
+
   return {
     title: dist.meta?.post || "Post",
   };
@@ -21,7 +25,9 @@ export async function generateStaticParams() {
   );
 }
 
-export default async function PostPage({ params: { id, locale } }) {
+export default async function PostPage({ params }) {
+  const locale = params.locale;
+  const id = params.id;
   const post = await getPost(id);
 
   if (!post) {
@@ -30,8 +36,8 @@ export default async function PostPage({ params: { id, locale } }) {
 
   return (
     <article>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
+      <h2 className={css.postTitle}>{capitalizeFirst(post.title)}</h2>
+      <p className={css.postBody}>{capitalizeFirst(post.body)}</p>
     </article>
   );
 }

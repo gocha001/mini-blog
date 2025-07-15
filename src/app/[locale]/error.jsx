@@ -1,13 +1,25 @@
 "use client";
 
 import React from "react";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { getDictionary } from "@/lib/dictionary";
 
 export default function PostError({ error, reset }) {
+  const { locale } = useParams();
+  const [dist, setDist] = useState(null);
+
+  useEffect(() => {
+    getDictionary(locale).then(setDist);
+  }, [locale]);
+
+  if (!dist) return null;
+
   return (
-    <div>
-      <h2>Something went wrong</h2>
+    <div style={{ textAlign: "center", padding: "4rem" }}>
+      <h2>{dist.error.title}</h2>
       <p>{error.message}</p>
-      <button onClick={reset}>Try again</button>
+      <button onClick={reset}>{dist.error.retry}</button>
     </div>
   );
 }

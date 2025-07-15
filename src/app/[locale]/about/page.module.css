@@ -1,0 +1,8 @@
+.aboutTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutContent {
+  text-indent: 1em;
+}

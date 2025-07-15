@@ -14,5 +14,13 @@
     "title": "Page not found",
     "back": "Go back home"
   },
-  "footer": "Igor Kondratuk"
+  "about": {
+    "title": "About Us",
+    "content": "We are a small but ambitious team of developers who dream of creating user-friendly, fast, and multilingual web applications. Our project is just the first step on the way to large-scale solutions for real people. We believe in the power of open source, modern technologies, and continuous improvement. With every line of code, we are getting closer to our goal of becoming one of the leading teams in the world of web development."
+  },
+  "footer": "Igor Kondratuk",
+  "error": {
+    "title": "Something went wrong",
+    "retry": "Try again"
+  }
 }

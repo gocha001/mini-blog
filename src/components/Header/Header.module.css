@@ -1,12 +1,32 @@
+.headerWrapper {
+  width: 100%;
+  background-color: aliceblue;
+  position: fixed;
+}
+
 .header {
   display: flex;
-  justify-content: center;
-  width: 1200px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   gap: 100px;
-  width: 800px;
+  max-width: 300px;
+  width: 100%;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .nav {
+    gap: 10px;
+  }
 }

@@ -5,12 +5,13 @@ import Footer from "@/components/Footer/Footer";
 export const metadata = {
   title: "Localized App",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
   description: "Page with i18n layout",
 };
 
-export default function LocaleLayout({ children, params: { locale } }) {
+export default async function LocaleLayout({ children, params }) {
+  const locale = params.locale;
   return (
     <>
       <Header locale={locale} />
